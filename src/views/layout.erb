@@ -1,14 +1,81 @@
 <!doctype html>
 <html>
   <head>
-      <meta charset="utf-8"></meta>
-      <link rel='stylesheet' href='/css/style.css'></link>
+    <meta charset="utf-8"></meta>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!--Icon Materialize-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--My Css-->
+  <link rel='stylesheet' href='/css/style.css'></link>
+
   </head>
+
   <body>
 
-      <!-- MAIN CONTENT -->
-      <%= yield %>
-      <!-- MAIN CONTENT -->
+    <!--- Navbar ---->
+    <div class="navbar-fixed">
+      <nav class="menu">
+        <div class="nav-wrapper">
+          <a href="/"><img src="/img/logo-2.png"></a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="big-container">   <!--- Start Big Container ---->
+
+      <div class="row">
+        <div class="col s12 m6 header-1">
+          <h4 class="ubuntu-700"> <%= @title %> </h4>
+        </div>
+        <div class="col s12 m6">
+          <% if @hide_create_route != true %>
+          <a class="waves-effect yellow lighten-2 btn-large btn-create ubuntu-700" href='/rides/new'>New Route</a>
+          <% end %>
+
+          <% if @hide_routes_list != true %>
+          <a class="waves-effect yellow lighten-2 btn-large btn-list ubuntu-700" href='/'>Routes List</a>
+          <% end %>
+        </div>
+      </div>
+      <div class="line-divider"></div>
+
+    </div>   <!--- End Big Container ---->
+
+    <!-- MAIN CONTENT -->
+    <%= yield %>
+    <!-- MAIN CONTENT -->
+
+    <footer class="page-footer my-footer">
+      <div class="big-container">
+        <div class="col s12 m12 copyright">
+          <h6>Ⓒ 2015 Find your Ride</h6>
+        </div>
+
+      </div>
+    </footer>
+
 
   </body>
+
+  <!-- DEPENDENCIES -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/vendor/pickadate.js-3.5.6/lib/picker.js"></script>
+  <script src="/vendor/pickadate.js-3.5.6/lib/picker.time.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+  <!-- my Javascript -->
+  <script src="/js/style_2.js"></script>
+  <script src='/js/ride-editor.js'></script>
+
+
 </html>

@@ -4,9 +4,11 @@ require 'dotenv'
 Dotenv.load
 
 #Require Dependencies
+require "json"
 require "sinatra/base"
 require "sinatra/activerecord"
 require "sinatra/flash"
+require "sinatra/content_for"
 require "will_paginate"
 require 'will_paginate/active_record'
 
@@ -24,6 +26,9 @@ class MyApplication < Sinatra::Base
   #Configure Sinatra
   set :root,      File.dirname(__FILE__)
   set :sessions,  true
+
+  helpers Sinatra::ContentFor
+  helpers EscapeHTML
 
   #Configure Development
   configure :development do

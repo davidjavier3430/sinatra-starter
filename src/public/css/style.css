@@ -1,0 +1,146 @@
+/*--------- Fonts -----------*/
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
+
+.ubuntu-500 {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+}
+
+.ubuntu-700 {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+}
+
+.ubuntu-400 {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+}
+
+
+/*--------- Navbar -----------*/
+
+.btn-create {
+  float: right;
+  background-color: #FFEB3B;
+  color: #616161;
+  margin-left: 10px;
+}
+
+.btn-list {
+  float: right;
+  background-color: #FFEB3B;
+  color: #616161;
+}
+
+.nav-wrapper {
+text-align: center;
+}
+
+.menu {
+  background-color: #B6B6B6;
+  height: 80px;
+}
+
+/*--------- Big Container -----------*/
+
+.big-container {
+  max-width: 1000px;
+  margin: 50px auto 20px auto;
+}
+
+.line-divider {
+  height: 2px;
+  background-color: #B6B6B6;
+}
+
+.header-1 {
+  color: #616161;
+}
+
+/*--------- Alerts -----------*/
+.alert{
+  color: white;
+  background-color: #ef5350;
+  border-color:   #ef5350;
+  padding:       20px;
+  margin:        10px;
+  border-radius: 10px;
+}
+
+/*--------- Footer -----------*/
+html{
+  position: relative;
+}
+
+body{
+  padding-bottom: 111px;
+}
+
+footer.page-footer {
+  background-color: #fff59d;
+  padding: 5px 0 5px 0;
+  position: absolute;
+  bottom:0;
+  width:100%;
+  height: 111px;
+}
+
+.copyright {
+  color: #616161;
+  text-align: center;
+}
+
+/*--------- Page New -----------*/
+
+.header-2 {
+  color: #9E9E9E;
+}
+
+.btn-sub {
+  float: right;
+  color: #F5F5F5;
+}
+
+.row-sub {
+  padding: 15px 0 15px 0;
+}
+
+.picker__date-display {
+  background-color: #B6B6B6;
+}
+
+.picker__weekday-display {
+  background-color: #9E9E9E;
+}
+
+.picker__close, .picker__today, .picker__day--highlighted {
+  color: #FFEB3B;
+}
+
+.picker__day.picker__day--today {
+  color:  #FFEB3B;
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover {
+  background-color: #FFEB3B;
+}
+
+.type-road li {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+}
+
+.input-field {
+  font-family: 'ubuntu';
+  font-weight: 400;
+}
+
+.big-container-2 {
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+}
+
+.responsive-img {
+  background-color: black;
+}
