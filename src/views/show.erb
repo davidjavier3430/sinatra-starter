@@ -20,16 +20,20 @@
     <h4><%= @ride.date.in_time_zone("America/La_Paz").strftime("%a %b %e, %Y") %></h4>
   </div>
 
-  <div class="col s12 m4">
+  <div class="col s12 m2">
     <h4><%= @ride.time.in_time_zone("America/La_Paz").strftime("%I:%M %P") %></h4>
   </div>
 
-  <div class="col s12 m4">
+  <div class="col s12 m2">
       <% if @ride.ride_type == 0 %>
-            <h4>Road</h4>
+            <h4 class="ubuntu-400">Road</h4>
       <% else %>
             <h4>Mountain</h4>
         <% end %>
+  </div>
+
+  <div class="col s12 m4">
+    <h4><%= @miles %>miles</h4>
   </div>
 
 <div class="col s12 m12">
@@ -37,6 +41,8 @@
     <div   data-ride-map    style='width:100%;height:400px;'></div>
     <input data-ride-data   type='hidden' name='ride' value='<%= h @ride.route.to_json %>' />
   </div>
+</div>
+
 </div>
 
 </div>

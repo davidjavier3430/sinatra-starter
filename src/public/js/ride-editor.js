@@ -159,7 +159,7 @@ RideEditor.prototype.update = function(){
       destination:       destinationPoint.lat + "," + destinationPoint.lng,
       waypoints:         waypoints,
       optimizeWaypoints: false,
-      travelMode:        google.maps.TravelMode.DRIVING ,
+      travelMode:        google.maps.TravelMode.DRIVING,
     }, function(response, status) {
        self.onDirectionsServiceResponse( response, status );
     });

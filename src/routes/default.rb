@@ -29,6 +29,7 @@ class MyApplication < Sinatra::Base
     @title = "Route Info"
     ride_id =  params[:id]
     @ride = Ride.find(ride_id)
+    @miles = '%.2f' % @ride.route['meters'].meters.to.miles
     erb :show
   end
 

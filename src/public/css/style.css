@@ -17,6 +17,11 @@
   font-weight: 400;
 }
 
+..ubuntu-300 {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+}
+
 
 /*--------- Navbar -----------*/
 
