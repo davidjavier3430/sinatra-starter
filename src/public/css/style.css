@@ -17,7 +17,7 @@
   font-weight: 400;
 }
 
-..ubuntu-300 {
+.ubuntu-300 {
   font-family: 'Ubuntu';
   font-weight: 300;
 }
@@ -43,7 +43,7 @@ text-align: center;
 }
 
 .menu {
-  background-color: #B6B6B6;
+  background-color: #F5F5F5;
   height: 80px;
 }
 
@@ -63,6 +63,10 @@ text-align: center;
   color: #616161;
 }
 
+.btn-large {
+  padding: 0 15px 0 15px;
+}
+
 /*--------- Alerts -----------*/
 .alert{
   color: white;
@@ -79,16 +83,16 @@ html{
 }
 
 body{
-  padding-bottom: 111px;
+  /*padding-bottom: 111px;*/
 }
 
 footer.page-footer {
-  background-color: #fff59d;
+  background-color: #fff9c4;
   padding: 5px 0 5px 0;
-  position: absolute;
-  bottom:0;
-  width:100%;
-  height: 111px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  /*height: 111px;*/
 }
 
 .copyright {
@@ -96,10 +100,29 @@ footer.page-footer {
   text-align: center;
 }
 
+.my-footer li {
+  display: inline-block;
+  margin: 0;
+}
+
+.my-footer ul {
+  text-align: center;
+}
+
+.my-footer a {
+  text-decoration: underline;
+  color: #616161;
+}
+
+.my-footer a:hover {
+  color: #26a69a;
+}
+
 /*--------- Page New -----------*/
 
 .header-2 {
   color: #9E9E9E;
+  margin-top: 0px;
 }
 
 .btn-sub {
@@ -108,7 +131,7 @@ footer.page-footer {
 }
 
 .row-sub {
-  padding: 15px 0 15px 0;
+  padding: 0 0 0 0;
 }
 
 .picker__date-display {
@@ -138,7 +161,7 @@ footer.page-footer {
 
 .input-field {
   font-family: 'ubuntu';
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .big-container-2 {
@@ -148,4 +171,66 @@ footer.page-footer {
 
 .responsive-img {
   background-color: black;
+}
+
+/*--------- Page Show -----------*/
+
+.show-list-1 {
+  color: #616161;
+  margin-top: 0;
+}
+
+.show-list-2 {
+  margin-top: 0;
+  color: #B6B6B6;
+  font-size: 25px;
+}
+
+.show-list-3 {
+  margin-top: 0;
+  color: #26a69a;
+  font-size: 32px;
+}
+
+.my-card {
+  padding: 15px 0 15px 0;
+}
+
+.my-map {
+  margin-bottom: 20px;
+}
+
+/*--------- Page Index -----------*/
+
+.pagination li.active {
+  background-color:  #26a69a;
+}
+
+.table-1 {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  color: #26a69a;
+  font-size: 16px;
+}
+
+.table-2 {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  color: #616161;
+  font-size: 14px;
+}
+
+.table-3 {
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  color: #616161;
+  font-size: 20px;
+}
+
+table a:hover {
+  text-decoration: underline;
+}
+
+.text-align {
+  text-align: center;
 }

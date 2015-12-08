@@ -72,6 +72,8 @@ GEM
     will_paginate (3.0.7)
     will_paginate-bootstrap (1.0.1)
       will_paginate (>= 3.0.3)
+    will_paginate-materialize (0.1.2)
+      will_paginate (~> 3.0.6)
 
 PLATFORMS
   ruby
@@ -91,6 +93,7 @@ DEPENDENCIES
   thin
   will_paginate
   will_paginate-bootstrap
+  will_paginate-materialize
 
 BUNDLED WITH
    1.10.6

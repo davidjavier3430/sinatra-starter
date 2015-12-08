@@ -3,6 +3,25 @@ class MyApplication < Sinatra::Base
   get "/" do
     @title = "Choose your Route"
     @hide_routes_list = true
+
+    @page  = params[:page]
+    if @page == nil
+      @page = 1
+    else
+      @page = @page.to_i
+    end
+
+    if @page <= 0
+      @page = 1
+    end
+
+    @size  = 11
+    @pagecount = Ride.where( "date >= ?" , Date.new ).count / @size
+    @rides = Ride.order( date: :desc ).paginate( page: @page , per_page: @size ).where( "date >= ?" , Date.new )
+
+    # @ride.route['points'][0]['name']
+    # @ride.route['points'][0]['address']
+
     erb :index
   end
 
@@ -41,6 +60,7 @@ class MyApplication < Sinatra::Base
     @ride = Ride.find(ride_id)
     @members_count = @ride.members['members'].count + 1
     @miles = '%.2f' % @ride.route['meters'].meters.to.miles
+
     erb :show
   end
 

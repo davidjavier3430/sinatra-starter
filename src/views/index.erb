@@ -1,1 +1,127 @@
+<div class="big-container-2"> <!--- start big-container --->
 
+  <!-- <% @rides.each do | ride | %>
+    <h1> <%= ride.nickname %> </h1>
+  <% end %> -->
+
+  <!--<strong> Page: <%= @page %> </strong>-->
+
+  <table class="bordered highlight responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">
+                <h6 class="table-1">
+                  Date
+                </h6>
+              </th>
+              <th data-field="name">
+                <h6 class="table-1">
+                  <i class="fa fa-map-marker fa-2x"></i>
+                  Start Point
+                </h6>
+              </th>
+              <th data-field="price">
+                <h6 class="table-1">
+                  Miles
+                </h6>
+              </th>
+              <th data-field="price">
+                <h6 class="table-1">
+                  Riders
+                </h6>
+              </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <% @rides.each do | ride | %>
+          <tr>
+            <td>
+              <h6">
+                <a class="table-1" href="/rides/<%= ride.id %>">
+                  <%= ride.date.in_time_zone("America/La_Paz").strftime("%a %b %e, %Y") %>
+                </a>
+              </h6>
+            </td>
+            <td>
+              <h6>
+                <a class="table-2" href="/rides/<%= ride.id %>">
+                  <%= ride.route["points"].first["name"] %>
+                </a>
+                  <br />
+              </h6>
+              <h6>
+                <a class="table-2" href="/rides/<%= ride.id %>">
+                  <%= ride.route["points"].first["address"] %>
+                </a>
+              </h6>
+            </td>
+            <td>
+              <h6>
+                <a class="table-3" href="/rides/<%= ride.id %>">
+                  <%= '%.2f' % ride.route['meters'].meters.to.miles %>
+                </a>
+            </h6>
+            </td>
+            <td>
+              <h6>
+                <a class="table-3" href="/rides/<%= ride.id %>">
+                  <%= ride.members['members'].size %>
+                </a>
+              </h6>
+            </td>
+          </tr>
+          <% end %>
+
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="col s12 m12">
+          <ul class="pagination">
+
+            <% if @page == 1 %>
+            <li class="disabled">
+              <a href="?page=1"><i class="material-icons">chevron_left</i>
+              </a>
+            </li>
+            <% else %>
+            <li>
+              <a href="?page=<%= @page -1 %>"><i class="material-icons">chevron_left</i>
+              </a>
+            </li>
+            <% end %>
+
+            <% (1..@pagecount).each do | i | %>
+              <% if @page == i %>
+                <li class="active">
+                  <a href="?page=<%= i %>">
+                    <%= i %>
+                  </a>
+                </li>
+              <% else %>
+                <li class="waves-effect">
+                  <a href="?page=<%= i %>">
+                    <%= i %>
+                  </a>
+                </li>
+              <% end  %>
+            <% end %>
+
+            <% if @page == @pagecount %>
+              <li class="disabled waves-effect">
+                <a href="?page=<?= @pagecount %>">
+                  <i class="material-icons">chevron_right</i>
+                </a>
+              </li>
+            <% else %>
+              <li class="waves-effect"><a href="?page=<?= @page + 1 %>">
+                <i class="material-icons">chevron_right</i>
+              </a>
+            </li>
+            <% end %>
+
+          </ul>
+        </div>
+      </div>
+    </div>                        <!--- end big-container --->

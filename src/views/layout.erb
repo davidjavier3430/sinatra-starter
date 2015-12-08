@@ -23,7 +23,7 @@
     <div class="navbar-fixed">
       <nav class="menu">
         <div class="nav-wrapper">
-          <a href="/"><img src="/img/logo-2.png"></a>
+          <a href="/"><img src="/img/logo-8.png"></a>
         </div>
       </nav>
     </div>
@@ -36,11 +36,11 @@
         </div>
         <div class="col s12 m6">
           <% if @hide_create_route != true %>
-          <a class="waves-effect yellow lighten-2 btn-large btn-create ubuntu-700" href='/rides/new'>New Route</a>
+          <a class="waves-effect yellow lighten-3 btn-large btn-create ubuntu-700" href='/rides/new'>New Route</a>
           <% end %>
 
           <% if @hide_routes_list != true %>
-          <a class="waves-effect yellow lighten-2 btn-large btn-list ubuntu-700" href='/'>Routes List</a>
+          <a class="waves-effect yellow lighten-3 btn-large btn-list ubuntu-700" href='/'>Routes List</a>
           <% end %>
         </div>
       </div>
@@ -53,7 +53,15 @@
     <!-- MAIN CONTENT -->
 
     <footer class="page-footer my-footer">
-      <div class="big-container">
+      <div class="row">
+        <div class="col s12 m12">
+          <ul>
+            <li class="ubuntu-700"><a href="/">Routes List</a></li>
+            <li><img src="/img/logo-9.png"></li>
+            <li class="ubuntu-700"><a href="/rides/new">New Route</a></li>
+          </ul>
+        </div>
+
         <div class="col s12 m12 copyright">
           <h6>Ⓒ 2015 Find your Ride</h6>
         </div>

@@ -27,6 +27,7 @@ class MyApplication < Sinatra::Base
   set :root,      File.dirname(__FILE__)
   set :sessions,  true
 
+  register WillPaginate::Sinatra
   helpers Sinatra::ContentFor
   helpers EscapeHTML
 
