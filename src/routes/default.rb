@@ -15,7 +15,8 @@ class MyApplication < Sinatra::Base
       @page = 1
     end
 
-    
+
+
     @size = 10
     @pagecount = Ride.where( "date >= ?" , Date.new ).count / @size
 
@@ -49,7 +50,7 @@ class MyApplication < Sinatra::Base
 
   post "/rides/:id/members" do
     @ride = Ride.find(params['id'])
-    @ride.members['members'].push({'email': params['ride']['members']})
+    @ride.members['members'].push({ email: params['ride']['members']})
     @ride.save
     if @ride.errors.empty?
       redirect "/rides/#{@ride.id}"
