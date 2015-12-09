@@ -201,6 +201,9 @@ RideEditor.prototype.createMarker = function( point , index ){
   var infoWindowContent = [];
   infoWindowContent.push( "<div class='col s12 m12 text-align ubuntu-500'>" );
   infoWindowContent.push( point.name );
+  infoWindowContent.push( "<address>" );
+  infoWindowContent.push( point.address );
+  infoWindowContent.push( "</address>" );
   if( !this.options.readOnly ){
     infoWindowContent.push( "<div class='col s12 m12 text-align'>" );
     infoWindowContent.push( "<button class='waves-effect waves-light btn ubuntu-500' onclick='RideEditor.delete(" + this.id + "," + index + ")'> <i class='material-icons prefix'>delete</i> Remove </button>");

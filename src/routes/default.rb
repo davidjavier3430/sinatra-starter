@@ -15,8 +15,10 @@ class MyApplication < Sinatra::Base
       @page = 1
     end
 
-    @size  = 11
+    
+    @size = 10
     @pagecount = Ride.where( "date >= ?" , Date.new ).count / @size
+
     @rides = Ride.order( date: :desc ).paginate( page: @page , per_page: @size ).where( "date >= ?" , Date.new )
 
     # @ride.route['points'][0]['name']
