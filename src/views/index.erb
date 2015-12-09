@@ -37,7 +37,7 @@
           <% @rides.each do | ride | %>
           <tr>
             <td>
-              <h6">
+              <h6>
                 <a class="table-1" href="/rides/<%= ride.id %>">
                   <%= ride.date.in_time_zone("America/La_Paz").strftime("%a %b %e, %Y") %>
                 </a>

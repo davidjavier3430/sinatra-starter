@@ -200,6 +200,12 @@ footer.page-footer {
   margin-bottom: 20px;
 }
 
+.header-3 {
+  color: #26a69a;
+  margin-top: 0px;
+  padding: 20px 0;
+}
+
 /*--------- Page Index -----------*/
 
 .pagination li.active {
@@ -233,4 +239,11 @@ table a:hover {
 
 .text-align {
   text-align: center;
+}
+
+.my-map {
+  border: 0;
+	border-bottom: 30px;
+	border-image:url("/img/tria-1.png") 100 20 repeat;
+	border-image-outset: 30px 0 ;
 }

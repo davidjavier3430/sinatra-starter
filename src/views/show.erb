@@ -64,21 +64,21 @@
 
 
 
-  <div class="col s12 m12 my-map">   <!--- start google map --->
+  <div id="border" class="col s12 m12 my-map">   <!--- start google map --->
     <div style='width:100%;' data-ride>
       <div   data-ride-map    style='width:100%;height:400px;'></div>
       <input data-ride-data   type='hidden' name='ride' value='<%= h @ride.route.to_json %>' />
     </div>
   </div>                       <!--- End google map --->
 
-  <div class="col s12 m12 header-2">
-    <h5 class="ubuntu-500 header-2">Join Up</h5>
+  <div class="col s12 m12">
+    <h5 class="ubuntu-500 header-3">Join Up</h5>
     <h6 class="ubuntu-500 show-list-1">If you want to join in the route add your email in the space</h6>
   </div>
 
   <form method='POST' action="/rides/<%= @ride.id %>/members">
 
-    <div class="input-field col s12 m4">
+    <div class="input-field col s12 m5">
       <i class="material-icons prefix">email</i>
       <input id="" name="ride[members]" type="text" class="">
       <label for="icon_prefix">enter Email</label>
