@@ -12,9 +12,10 @@ gem 'will_paginate-bootstrap'
 gem 'will_paginate-materialize'
 gem 'pg'
 gem 'alchemist'
+gem 'thin'
 
 group :development do
-  gem 'thin'
+
   gem 'pry'
   gem 'pry-byebug'
   gem 'shotgun'
