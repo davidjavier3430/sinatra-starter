@@ -3,6 +3,7 @@ class MyApplication < Sinatra::Base
   get "/" do
     @title = "Choose your Route"
     @hide_routes_list = true
+    @hide_join_up = true
 
     @page  = params[:page]
     if @page == nil
@@ -31,6 +32,7 @@ class MyApplication < Sinatra::Base
   get "/rides/new" do
     @title = "Create Route"
     @hide_create_route = true
+    @hide_join_up = true
     @ride = Ride.new
     erb :new
   end

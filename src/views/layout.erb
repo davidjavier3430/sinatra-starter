@@ -12,6 +12,11 @@
   <!--Icon Materialize-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+   <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    </head>
+
   <!--My Css-->
   <link rel='stylesheet' href='/css/style.css'></link>
 
@@ -40,7 +45,11 @@
           <% end %>
 
           <% if @hide_routes_list != true %>
-          <a class="waves-effect yellow lighten-3 btn-large btn-list ubuntu-700" href='/'>Routes List</a>
+          <a class="waves-effect yellow lighten-3 btn-large btn-create ubuntu-700" href='/'>Routes List</a>
+          <% end %>
+
+          <% if @hide_join_up != true %>
+          <a class="waves-effect teal lighten-2 btn-large btn-list ubuntu-700" href='#sect-join'>Join Up</a>
           <% end %>
         </div>
       </div>
